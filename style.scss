@@ -18,10 +18,10 @@ $photo-w: 38.9%;
 $left-gap: 8.9%;
 $right-gap: 12.5%;
 $text-h: 53%;
-$portrait-h: 14.2%;
+$portrait-h: 15.5%;
 $portrait-w: 9.1%;
-$arrow-w: 7.4%;
-$profile-right-gap: 7.7%;
+$arrow-w: 8.4%;
+$profile-right-gap: 10.2%;
 
 html, body {
     font-family: $font-family;
@@ -76,11 +76,11 @@ body {
                     font-weight: 700;
                     color: $c-dark-blue;
                     line-height: 2.2rem;
-                    letter-spacing: 0.025rem;
+                    letter-spacing: 0.022rem;
                 }
 
                 .sub-heading {
-                    font-size: 1.00rem;
+                    font-size: 1.02rem;
                     font-weight: 500;
                     color: $c-desaturated-blue;
                     line-height: 1.5rem;
@@ -92,7 +92,7 @@ body {
                 grid-column: 2 / span 2;
                 display: grid;
                 grid-template-rows: 1fr;
-                grid-template-columns: $portrait-w 1fr $arrow-w $profile-right-gap + 3.5%;
+                grid-template-columns: $portrait-w 1fr $arrow-w $profile-right-gap;
 
                 #portrait {
                     grid-row: 1;
@@ -145,7 +145,7 @@ body {
                        }
                    }
 
-                    #arrow-background:hover {
+/*                    #arrow-background:hover {
                         background-color: $c-desaturated-blue;
                     }
 
@@ -159,24 +159,24 @@ body {
 
                     #arrow-background:hover ~ #social-links {
                         display: flex;
-                    }
+                    } */
        
                     #social-links {
-                        display: flex; 
+                        display: none; 
                         position: absolute;
-                        width: 845%;
-                        top: -192%;
+                        width: 727%;
+                        top: -179%;
                         flex-direction: column;
-                        height: 190%;
+                        height: 179%;
 
                         #social-content {
                             background-color: $c-dark-blue;
-                            border-radius: 8px;
+                            border-radius: 10px;
                             height: 70%;
                             display: flex;
                             flex-direction: row;
                             align-items: center;
-                            box-shadow: 2px 5px 10px -7px;
+                            box-shadow: 1px 15px 30px -17px $c-grayish-blue;
                             z-index: 10;
     
                             #social-text {
@@ -201,28 +201,31 @@ body {
 
                                 .icon:nth-child(1) {
                                     margin-right: 13%;
-                                    margin-left: 6%;
+                                    margin-left: 6.0%;
+                                    height: 36%;
                                 }
 
                                 .icon:nth-child(2) {
-                                    margin-right: 13%;
-                                    height: 31.5%;
+                                    margin-right: 12%;
+                                    height: 28.5%;
                                 }
                                 .icon:nth-child(3) {
                                     margin-right: 10%;
+                                    height: 36%;
                                 }
                             }
                         }
 
-                        #arrow {
+                        #down-arrow {
                             position: absolute;
-                            bottom: 19%;
-                            height: 23%;
-                            width: 6.5%;
+                            display: flex;
+                            bottom: 20.5%;
+                            height: 27%;
+                            width: 8.5%;
                             align-self: center;
                             @include transform(rotate(-45deg));
                             background-color: $c-dark-blue;
-                            box-shadow: 2px 10px 15px -5px;
+                            box-shadow: 2px 45px 35px -10px;
                             z-index: 15;
                         }
 

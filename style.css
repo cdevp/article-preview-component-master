@@ -36,7 +36,7 @@ body #card #content {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 11.2% 56% 7% 14.2% 1fr;
+  grid-template-rows: 12.5% 56% 7% 15.5% 1fr;
   grid-template-columns: 8.9% 1fr 12.5%;
 }
 body #card #content #text-content {
@@ -51,10 +51,10 @@ body #card #content #text-content .heading {
   font-weight: 700;
   color: #48556a;
   line-height: 2.2rem;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.022rem;
 }
 body #card #content #text-content .sub-heading {
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: 500;
   color: #6d7f97;
   line-height: 1.5rem;
@@ -64,7 +64,7 @@ body #card #content #profile-content {
   grid-column: 2/span 2;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 9.1% 1fr 7.4% 11.2%;
+  grid-template-columns: 9.1% 1fr 8.4% 10.2%;
 }
 body #card #content #profile-content #portrait {
   grid-row: 1;
@@ -98,6 +98,21 @@ body #card #content #profile-content #options-arrow {
   align-items: center;
   width: 100%;
   height: 100%;
+  /*                    #arrow-background:hover {
+                          background-color: $c-desaturated-blue;
+                      }
+
+                      #arrow-background:hover #arrow {
+                          display: none;
+                      }
+
+                      #arrow-background:hover #white-arrow {
+                          display: block;
+                      }
+
+                      #arrow-background:hover ~ #social-links {
+                          display: flex;
+                      } */
 }
 body #card #content #profile-content #options-arrow #arrow-background {
   width: 100%;
@@ -111,34 +126,22 @@ body #card #content #profile-content #options-arrow #arrow-background {
 body #card #content #profile-content #options-arrow #arrow-background #white-arrow {
   display: none;
 }
-body #card #content #profile-content #options-arrow #arrow-background:hover {
-  background-color: #6d7f97;
-}
-body #card #content #profile-content #options-arrow #arrow-background:hover #arrow {
-  display: none;
-}
-body #card #content #profile-content #options-arrow #arrow-background:hover #white-arrow {
-  display: block;
-}
-body #card #content #profile-content #options-arrow #arrow-background:hover ~ #social-links {
-  display: flex;
-}
 body #card #content #profile-content #options-arrow #social-links {
-  display: flex;
+  display: none;
   position: absolute;
-  width: 845%;
-  top: -192%;
+  width: 727%;
+  top: -179%;
   flex-direction: column;
-  height: 190%;
+  height: 179%;
 }
 body #card #content #profile-content #options-arrow #social-links #social-content {
   background-color: #48556a;
-  border-radius: 8px;
+  border-radius: 10px;
   height: 70%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  box-shadow: 2px 5px 10px -7px;
+  box-shadow: 1px 15px 30px -17px #9eafc2;
   z-index: 10;
 }
 body #card #content #profile-content #options-arrow #social-links #social-content #social-text {
@@ -162,25 +165,28 @@ body #card #content #profile-content #options-arrow #social-links #social-conten
 body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(1) {
   margin-right: 13%;
   margin-left: 6%;
+  height: 36%;
 }
 body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(2) {
-  margin-right: 13%;
-  height: 31.5%;
+  margin-right: 12%;
+  height: 28.5%;
 }
 body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(3) {
   margin-right: 10%;
+  height: 36%;
 }
-body #card #content #profile-content #options-arrow #social-links #arrow {
+body #card #content #profile-content #options-arrow #social-links #down-arrow {
   position: absolute;
-  bottom: 19%;
-  height: 23%;
-  width: 6.5%;
+  display: flex;
+  bottom: 20.5%;
+  height: 27%;
+  width: 8.5%;
   align-self: center;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   background-color: #48556a;
-  box-shadow: 2px 10px 15px -5px;
+  box-shadow: 2px 45px 35px -10px;
   z-index: 15;
 }
 
