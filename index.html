@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Article preview component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,8 +18,53 @@
   </style>
 </head>
 <body>
+  <div id="card">
+    <img id="photo" src="images/drawers.jpg" alt="photo of green drawers with a pot on top and a frame with text that states love will keep us alive" />
+    <div id="content">
+      <div id="text-content">
+        <span class="heading">
+          Shift the overall look and feel by adding these wonderful touches to furniture in your home
+        </span>
+        <span class="sub-heading">
+          Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.
+        </span>
+      </div> 
+      <div id="profile-content">
+        <img id="portrait" src="images/avatar-michelle.jpg" />
+        <div id="profile-text">
+          <span id="name">
+            Michelle Appleton
+          </span>
+          <span id="date">
+             28 Jun 2020
+          </span>
+        </div>
+        <div id="options-arrow">
+          <div id="arrow-background">
+            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>            
+            <svg id="white-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="white" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>            
+           </div>
+          <div id="social-links">
+            <div id="social-content">
+              <span id="social-text">SHARE</span>
+              <div id="social-icons">
+                <img class="icon" src="images/icon-facebook.svg" alt="facebook icon" />
+                <img class="icon" src="images/icon-twitter.svg" alt="twitter icon" />
+                <img class="icon" src="images/icon-pinterest.svg" alt="pinterest icon" />
+              </div>
+            </div>
+            <div id="arrow">
 
-  Shift the overall look and feel by adding these wonderful 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--  Shift the overall look and feel by adding these wonderful 
   touches to furniture in your home
 
   Ever been in a room and felt like something was missing? Perhaps 
@@ -31,6 +79,6 @@
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

@@ -1,0 +1,187 @@
+/* landscape view */
+html, body {
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf2f8;
+}
+body #card {
+  display: grid;
+  height: 35.125%;
+  width: 50.9%;
+  grid-template-rows: 1fr;
+  grid-template-columns: 38.9% 1fr;
+  background-color: white;
+  border-radius: 15px;
+}
+body #card #photo {
+  grid-row: 1;
+  grid-column: 1;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 0px 0px 15px;
+}
+body #card #content {
+  position: relative;
+  grid-row: 1;
+  grid-column: 2;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 11.2% 56% 7% 14.2% 1fr;
+  grid-template-columns: 8.9% 1fr 12.5%;
+}
+body #card #content #text-content {
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body #card #content #text-content .heading {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #48556a;
+  line-height: 2.2rem;
+  letter-spacing: 0.025rem;
+}
+body #card #content #text-content .sub-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6d7f97;
+  line-height: 1.5rem;
+}
+body #card #content #profile-content {
+  grid-row: 4;
+  grid-column: 2/span 2;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 9.1% 1fr 7.4% 11.2%;
+}
+body #card #content #profile-content #portrait {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+  border-radius: 20px;
+}
+body #card #content #profile-content #profile-text {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 1.5rem;
+}
+body #card #content #profile-content #profile-text #name {
+  color: #48556a;
+  font-weight: 700;
+}
+body #card #content #profile-content #profile-text #date {
+  color: #9eafc2;
+}
+body #card #content #profile-content #options-arrow {
+  position: relative;
+  grid-row: 1;
+  grid-column: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body #card #content #profile-content #options-arrow #arrow-background {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf2f8;
+  border-radius: 20px;
+}
+body #card #content #profile-content #options-arrow #arrow-background #white-arrow {
+  display: none;
+}
+body #card #content #profile-content #options-arrow #arrow-background:hover {
+  background-color: #6d7f97;
+}
+body #card #content #profile-content #options-arrow #arrow-background:hover #arrow {
+  display: none;
+}
+body #card #content #profile-content #options-arrow #arrow-background:hover #white-arrow {
+  display: block;
+}
+body #card #content #profile-content #options-arrow #arrow-background:hover ~ #social-links {
+  display: flex;
+}
+body #card #content #profile-content #options-arrow #social-links {
+  display: flex;
+  position: absolute;
+  width: 845%;
+  top: -192%;
+  flex-direction: column;
+  height: 190%;
+}
+body #card #content #profile-content #options-arrow #social-links #social-content {
+  background-color: #48556a;
+  border-radius: 8px;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 2px 5px 10px -7px;
+  z-index: 10;
+}
+body #card #content #profile-content #options-arrow #social-links #social-content #social-text {
+  color: #9eafc2;
+  font-size: 0.98rem;
+  width: 36.5%;
+  letter-spacing: 0.35rem;
+  text-align: center;
+  padding-left: 1.8rem;
+}
+body #card #content #profile-content #options-arrow #social-links #social-content #social-icons {
+  display: flex;
+  flex-direction: row;
+  width: 52.5%;
+  height: 100%;
+  align-items: center;
+}
+body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon {
+  height: 39%;
+}
+body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(1) {
+  margin-right: 13%;
+  margin-left: 6%;
+}
+body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(2) {
+  margin-right: 13%;
+  height: 31.5%;
+}
+body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(3) {
+  margin-right: 10%;
+}
+body #card #content #profile-content #options-arrow #social-links #arrow {
+  position: absolute;
+  bottom: 19%;
+  height: 23%;
+  width: 6.5%;
+  align-self: center;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #48556a;
+  box-shadow: 2px 10px 15px -5px;
+  z-index: 15;
+}
+
+/*# sourceMappingURL=style.css.map */
