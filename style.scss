@@ -42,6 +42,7 @@ html, body {
     font-size: $font-size;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 @media (min-width: 720px) {
@@ -73,8 +74,8 @@ html, body {
             grid-template-columns: $photo-w 1fr;
             background-color: white;
             border-radius: 15px;
-            min-width: 710px;
-            min-height: 260px;
+            min-width: 730px;
+            min-height: 280px;
             max-height: 500px;
     
             #photo {
@@ -285,6 +286,8 @@ html, body {
         display: grid;
         grid-template-rows: $p-top-gap $p-card-h 1fr;
         grid-template-columns: $p-left-gap 1fr $p-right-gap;
+        justify-items: center;
+        align-items: center;
         background-color: $c-light-gray-blue;
        
         #mobile-flag {
@@ -303,10 +306,11 @@ html, body {
             grid-template-rows: $p-photo-h 44%;
             grid-template-columns: 1fr;
             border-radius: 15px 15px 15px 15px;
+            height: 100%;
             min-width: 330px;
+            max-width: 400px;
             min-height: 500px;
-/*            min-width: 710px;
-            min-height: 260px;  DONT FORGET TO ADJUST THESE VALUES!*/ 
+            max-height: 700px;
 
             #photo {
                 display: none;
@@ -365,17 +369,12 @@ html, body {
                 display: flex;
                 flex-direction: column;
                 height: 14.7%;
-/*                flex-direction: row;  */
-                grid-template-rows: 1fr 1fr 1fr;
-                grid-template-columns: $p-right-gap 1fr $p-right-gap;
 
                 #mobile-profile-content {
                     grid-row: 1;
                     grid-column: 2;
                     display: flex;
                     height: 54%;
-                    grid-template-rows: 1fr;
-                    grid-template-columns: $p-portrait-w 1fr $p-arrow-w;
                     background-color: white;
                     align-items: center;
                     padding-top: 4.5%;
