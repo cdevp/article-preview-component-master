@@ -335,7 +335,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
+    width: 12%;
     height: 100%;
     z-index: 15;
   }
