@@ -1,4 +1,5 @@
 /* landscape view */
+/* profile view */
 html, body {
   font-family: Manrope, sans-serif;
   font-size: 13px;
@@ -6,188 +7,438 @@ html, body {
   width: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #ecf2f8;
+@media (min-width: 720px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf2f8;
+  }
+  body #mobile-flag {
+    display: none;
+  }
+  body #card #text-grid {
+    display: none;
+  }
+  body #card #footer {
+    display: none;
+  }
+  body #card {
+    display: grid;
+    height: 35.125%;
+    width: 50.9%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 38.9% 1fr;
+    background-color: white;
+    border-radius: 15px;
+    min-width: 710px;
+    min-height: 260px;
+  }
+  body #card #photo {
+    grid-row: 1;
+    grid-column: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px 0px 0px 15px;
+  }
+  body #card #content {
+    position: relative;
+    grid-row: 1;
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 12.5% 56% 7% 15.5% 1fr;
+    grid-template-columns: 8.9% 1fr 12.5%;
+  }
+  body #card #content #text-content {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body #card #content #text-content .heading {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #48556a;
+    line-height: 2.2rem;
+    letter-spacing: 0.022rem;
+  }
+  body #card #content #text-content .sub-heading {
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: #6d7f97;
+    line-height: 1.5rem;
+  }
+  body #card #content #profile-content {
+    grid-row: 4;
+    grid-column: 2/span 2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 9.1% 1fr 8.4% 10.2%;
+  }
+  body #card #content #profile-content #portrait {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20px;
+  }
+  body #card #content #profile-content #profile-text {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1.5rem;
+  }
+  body #card #content #profile-content #profile-text #name {
+    color: #48556a;
+    font-weight: 700;
+  }
+  body #card #content #profile-content #profile-text #date {
+    color: #9eafc2;
+  }
+  body #card #content #profile-content #options-arrow {
+    position: relative;
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  body #card #content #profile-content #options-arrow #arrow-background {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf2f8;
+    border-radius: 20px;
+  }
+  body #card #content #profile-content #options-arrow #arrow-background #white-arrow {
+    display: none;
+  }
+  body #card #content #profile-content #options-arrow #social-links {
+    display: none;
+    position: absolute;
+    width: 727%;
+    top: -179%;
+    flex-direction: column;
+    height: 179%;
+  }
+  body #card #content #profile-content #options-arrow #social-links #social-content {
+    background-color: #48556a;
+    border-radius: 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 1px 15px 30px -17px #9eafc2;
+    z-index: 10;
+  }
+  body #card #content #profile-content #options-arrow #social-links #social-content #social-text {
+    color: #9eafc2;
+    font-size: 0.98rem;
+    width: 36.5%;
+    letter-spacing: 0.35rem;
+    text-align: center;
+    padding-left: 1.8rem;
+  }
+  body #card #content #profile-content #options-arrow #social-links #social-content #social-icons {
+    display: flex;
+    flex-direction: row;
+    width: 52.5%;
+    height: 100%;
+    align-items: center;
+  }
+  body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon {
+    height: 39%;
+  }
+  body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(1) {
+    margin-right: 13%;
+    margin-left: 6%;
+    height: 36%;
+  }
+  body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(2) {
+    margin-right: 12%;
+    height: 28.5%;
+  }
+  body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(3) {
+    margin-right: 10%;
+    height: 36%;
+  }
+  body #card #content #profile-content #options-arrow #social-links #down-arrow {
+    position: absolute;
+    display: flex;
+    bottom: 20.5%;
+    height: 27%;
+    width: 8.5%;
+    align-self: center;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: #48556a;
+    box-shadow: 2px 45px 35px -10px;
+    z-index: 15;
+  }
 }
-body #card {
-  display: grid;
-  height: 35.125%;
-  width: 50.9%;
-  grid-template-rows: 1fr;
-  grid-template-columns: 38.9% 1fr;
-  background-color: white;
-  border-radius: 15px;
+@media (min-width: 770px) and (min-height: 1100px) {
+  body #card #content #text-content .heading {
+    font-size: 1.6rem;
+  }
+  body #card #content #text-content .sub-heading {
+    font-size: 1.1rem;
+  }
+  body #card #content #profile-content {
+    grid-template-columns: 14.1% 1fr 13.4% 15.2%;
+  }
+  body #card #content #profile-content #portrait {
+    border-radius: 30px;
+  }
+  body #card #content #profile-content #profile-text {
+    font-size: 1.05rem;
+  }
 }
-body #card #photo {
-  grid-row: 1;
-  grid-column: 1;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px 0px 0px 15px;
+@media (max-width: 719px) {
+  body {
+    display: grid;
+    grid-template-rows: 11.05% 76.8% 1fr;
+    grid-template-columns: 6.1% 1fr 6.1%;
+    background-color: #ecf2f8;
+  }
+  body #mobile-flag {
+    display: visible;
+  }
+  body #card #content {
+    display: none;
+  }
+  body #card {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 2;
+    grid-template-rows: 39% 44%;
+    grid-template-columns: 1fr;
+    border-radius: 15px 15px 15px 15px;
+    min-width: 330px;
+    min-height: 500px;
+    /*            min-width: 710px;
+                min-height: 260px;  DONT FORGET TO ADJUST THESE VALUES!*/
+  }
+  body #card #photo {
+    display: none;
+  }
+  body #card #mobile-photo {
+    background-image: url("images/drawers.jpg");
+    background-size: cover;
+    background-position: 0% 24%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0px 0px;
+    height: 40%;
+    z-index: 5;
+  }
+  body #card #text-grid {
+    position: relative;
+    background-color: white;
+    height: 47.3%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 15% 78%;
+    grid-template-columns: 10.2% 1fr 10.2%;
+    z-index: 10;
+  }
+  body #card #text-grid #mobile-text-content {
+    grid-row: 2;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 39.9% 1fr;
+    grid-template-columns: 1fr;
+  }
+  body #card #text-grid #mobile-text-content .mobile-heading {
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #48556a;
+    line-height: 1.86rem;
+    letter-spacing: 0rem;
+  }
+  body #card #text-grid #mobile-text-content .mobile-sub-heading {
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: #6d7f97;
+    line-height: 1.54rem;
+    align-self: end;
+  }
+  body #card #footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 14.7%;
+    /*                flex-direction: row;  */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 6.1% 1fr 6.1%;
+  }
+  body #card #footer #mobile-profile-content {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    height: 54%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 15.1% 1fr 13.2%;
+    background-color: white;
+    align-items: center;
+    padding-top: 4.5%;
+    padding-left: 10.1%;
+    padding-right: 10.1%;
+  }
+  body #card #footer #mobile-profile-content #mobile-portrait {
+    grid-row: 1;
+    grid-column: 1;
+    height: 95%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20px;
+  }
+  body #card #footer #mobile-profile-content #mobile-profile-text {
+    font-size: 1rem;
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 64.5%;
+    height: 100%;
+    padding-left: 1.25rem;
+  }
+  body #card #footer #mobile-profile-content #mobile-profile-text #mobile-name {
+    color: #48556a;
+    font-weight: 700;
+    padding-bottom: 0.5%;
+  }
+  body #card #footer #mobile-profile-content #mobile-profile-text #mobile-date {
+    color: #9eafc2;
+    padding-top: 1%;
+  }
+  body #card #footer #mobile-profile-content #mobile-options-arrow {
+    position: relative;
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    z-index: 15;
+  }
+  body #card #footer #mobile-profile-content #mobile-options-arrow #mobile-arrow-background {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf2f8;
+    border-radius: 20px;
+  }
+  body #card #footer #mobile-profile-content #mobile-options-arrow #mobile-arrow-background #mobile-white-arrow {
+    display: none;
+  }
+  body #card #footer #mobile-profile-content #mobile-social-links {
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    bottom: 11%;
+    left: 0%;
+    height: 87%;
+    width: 100%;
+    grid-row: 4/span 2;
+    grid-column: 1/span 3;
+    background-color: #48556a;
+    border-radius: 0px 0px 15px 15px;
+    z-index: 10;
+  }
+  body #card #footer #mobile-profile-content #mobile-social-links #mobile-social-content {
+    background-color: #48556a;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 1px 15px 30px -17px #9eafc2;
+    z-index: 10;
+  }
+  body #card #footer #mobile-profile-content #mobile-social-links #mobile-social-content #mobile-social-text {
+    color: #9eafc2;
+    font-size: 0.98rem;
+    width: 26.5%;
+    letter-spacing: 0.35rem;
+    text-align: center;
+    padding-left: 1.7rem;
+  }
+  body #card #footer #mobile-profile-content #mobile-social-links #mobile-social-content #mobile-social-icons {
+    display: flex;
+    flex-direction: row;
+    width: 52.5%;
+    height: 100%;
+    align-items: center;
+  }
+  body #card #footer #mobile-profile-content #mobile-social-links #mobile-social-content #mobile-social-icons .icon {
+    height: 32%;
+  }
+  body #card #footer #mobile-profile-content #mobile-social-links #mobile-social-content #mobile-social-icons .icon:nth-child(1) {
+    margin-right: 9%;
+    margin-left: 3%;
+    height: 32%;
+  }
+  body #card #footer #mobile-profile-content #mobile-social-links #mobile-social-content #mobile-social-icons .icon:nth-child(2) {
+    margin-right: 9%;
+    height: 28.5%;
+  }
+  body #card #footer #mobile-profile-content #mobile-social-links #mobile-social-content #mobile-social-icons .icon:nth-child(3) {
+    margin-right: 10%;
+    height: 32%;
+  }
+  body #card #footer #whitespace {
+    background-color: white;
+    width: 100%;
+    height: 37.3%;
+    border-radius: 0px 0px 15px 15px;
+  }
+  body #card #mobile-flag {
+    display: visible;
+  }
 }
-body #card #content {
-  position: relative;
-  grid-row: 1;
-  grid-column: 2;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-rows: 12.5% 56% 7% 15.5% 1fr;
-  grid-template-columns: 8.9% 1fr 12.5%;
+@media (max-width: 769px) and (min-height: 700px) {
+  body #card #text-grid #mobile-text-content .mobile-heading {
+    font-size: 1.4rem;
+  }
+  body #card #text-grid #mobile-text-content .mobile-sub-heading {
+    font-size: 1.05rem;
+  }
 }
-body #card #content #text-content {
-  grid-row: 2;
-  grid-column: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+@media (max-width: 769px) and (min-height: 800px) {
+  body #card #text-grid #mobile-text-content .mobile-heading {
+    font-size: 1.6rem;
+  }
+  body #card #text-grid #mobile-text-content .mobile-sub-heading {
+    font-size: 1.15rem;
+  }
 }
-body #card #content #text-content .heading {
-  font-size: 1.55rem;
-  font-weight: 700;
-  color: #48556a;
-  line-height: 2.2rem;
-  letter-spacing: 0.022rem;
-}
-body #card #content #text-content .sub-heading {
-  font-size: 1.02rem;
-  font-weight: 500;
-  color: #6d7f97;
-  line-height: 1.5rem;
-}
-body #card #content #profile-content {
-  grid-row: 4;
-  grid-column: 2/span 2;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 9.1% 1fr 8.4% 10.2%;
-}
-body #card #content #profile-content #portrait {
-  grid-row: 1;
-  grid-column: 1;
-  width: 100%;
-  align-self: center;
-  justify-self: center;
-  border-radius: 20px;
-}
-body #card #content #profile-content #profile-text {
-  grid-row: 1;
-  grid-column: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 1.5rem;
-}
-body #card #content #profile-content #profile-text #name {
-  color: #48556a;
-  font-weight: 700;
-}
-body #card #content #profile-content #profile-text #date {
-  color: #9eafc2;
-}
-body #card #content #profile-content #options-arrow {
-  position: relative;
-  grid-row: 1;
-  grid-column: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  /*                    #arrow-background:hover {
-                          background-color: $c-desaturated-blue;
-                      }
-
-                      #arrow-background:hover #arrow {
-                          display: none;
-                      }
-
-                      #arrow-background:hover #white-arrow {
-                          display: block;
-                      }
-
-                      #arrow-background:hover ~ #social-links {
-                          display: flex;
-                      } */
-}
-body #card #content #profile-content #options-arrow #arrow-background {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ecf2f8;
-  border-radius: 20px;
-}
-body #card #content #profile-content #options-arrow #arrow-background #white-arrow {
-  display: none;
-}
-body #card #content #profile-content #options-arrow #social-links {
-  display: none;
-  position: absolute;
-  width: 727%;
-  top: -179%;
-  flex-direction: column;
-  height: 179%;
-}
-body #card #content #profile-content #options-arrow #social-links #social-content {
-  background-color: #48556a;
-  border-radius: 10px;
-  height: 70%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-shadow: 1px 15px 30px -17px #9eafc2;
-  z-index: 10;
-}
-body #card #content #profile-content #options-arrow #social-links #social-content #social-text {
-  color: #9eafc2;
-  font-size: 0.98rem;
-  width: 36.5%;
-  letter-spacing: 0.35rem;
-  text-align: center;
-  padding-left: 1.8rem;
-}
-body #card #content #profile-content #options-arrow #social-links #social-content #social-icons {
-  display: flex;
-  flex-direction: row;
-  width: 52.5%;
-  height: 100%;
-  align-items: center;
-}
-body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon {
-  height: 39%;
-}
-body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(1) {
-  margin-right: 13%;
-  margin-left: 6%;
-  height: 36%;
-}
-body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(2) {
-  margin-right: 12%;
-  height: 28.5%;
-}
-body #card #content #profile-content #options-arrow #social-links #social-content #social-icons .icon:nth-child(3) {
-  margin-right: 10%;
-  height: 36%;
-}
-body #card #content #profile-content #options-arrow #social-links #down-arrow {
-  position: absolute;
-  display: flex;
-  bottom: 20.5%;
-  height: 27%;
-  width: 8.5%;
-  align-self: center;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  background-color: #48556a;
-  box-shadow: 2px 45px 35px -10px;
-  z-index: 15;
+@media (max-width: 769px) and (min-height: 900px) {
+  body #card #text-grid #mobile-text-content .mobile-heading {
+    font-size: 1.8rem;
+  }
+  body #card #text-grid #mobile-text-content .mobile-sub-heading {
+    font-size: 1.25rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
-  <script src="compiled-script.js" defer>
+  <script src="script.js" defer>
   </script>
 
   <title>Frontend Mentor | Article preview component</title>
@@ -22,6 +22,7 @@
 <body>
   <div id="card">
     <img id="photo" src="images/drawers.jpg" alt="photo of green drawers with a pot on top and a frame with text that states love will keep us alive" />
+    <div id="mobile-photo"></div>
     <div id="content">
       <div id="text-content">
         <span class="heading">
@@ -58,12 +59,53 @@
               </div>
             </div>
             <div id="down-arrow">
-
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div id="text-grid">
+      <div id="mobile-text-content">
+        <span class="mobile-heading">
+          Shift the overall look and feel by adding these wonderful touches to furniture in your home
+        </span>
+        <span class="mobile-sub-heading">
+          Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.
+        </span>
+      </div> 
+    </div>
+    <div id="footer">
+      <div id="mobile-profile-content">
+        <img id="mobile-portrait" src="images/avatar-michelle.jpg" />
+        <div id="mobile-profile-text">
+          <span id="mobile-name">
+            Michelle Appleton
+          </span>
+          <span id="mobile-date">
+             28 Jun 2020
+          </span>
+        </div>
+        <div id="mobile-options-arrow">
+          <div id="mobile-arrow-background">
+            <svg id="mobile-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>            
+            <svg id="mobile-white-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="white" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>            
+          </div>
+        </div>
+        <div id="mobile-social-links">
+          <div id="mobile-social-content">
+            <span id="mobile-social-text">SHARE</span>
+            <div id="mobile-social-icons">
+              <img class="icon" src="images/icon-facebook.svg" alt="facebook icon" />
+              <img class="icon" src="images/icon-twitter.svg" alt="twitter icon" />
+              <img class="icon" src="images/icon-pinterest.svg" alt="pinterest icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="whitespace"></div>
+    <div id="mobile-flag"></div>
   </div>
 
 <!--  Shift the overall look and feel by adding these wonderful 
